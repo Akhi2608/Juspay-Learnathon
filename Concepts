@@ -1,0 +1,56 @@
+Docker
+Start by installing docker. Get Docker
+Docker containers or images are created by writing a file called Dockerfile. These files are
+used to give commands to the docker daemon to create such images. These images then
+can be deployed to different environments.
+> Get started by going through this link: Orientation and setup
+
+
+
+> Try creating your own images and running them by following this simple tutorial: Sample
+application
+> To see some of the commands to navigate around docker: 🐋 ELI5: Docker |
+docker-explained
+Now that you have a way to create docker containers, let’s hop to some kubernetes (K8s)
+concepts.
+K8s Control Plane and Nodes
+Kubernetes has a few components, put together, called the control plane, which
+orchestrates containers deployed on K8s. Now, the control plane itself requires some
+resources or servers to run, which is not usually used to run applications. Servers which run
+applications are called Nodes. These also have some softwares installed which works along
+with the control plane to provide a nice interface to manage your applications. More about
+this here: Kubernetes Components
+Pod
+Pods are the smallest deployable unit in K8s, can have one or more containers, which can
+share things, like network.
+Deployment
+Deployment is more like a template to create replicas of such pods. Say you want 5 copies
+of your application, you can use deployments rather than manually creating 5 pods. Specify
+the template, configurations and number of pods required, voila!
+Service
+Service is a way to address a set of pods. This is done using tags in pods which are used to
+select the pods under a service. Using service, K8s provides a way to call them using K8s’s
+internal DNS system: Kubernetes DNS for Services and Pods
+
+Confusing much? Let’s try some of these things out.
+Even though K8s is deployed mostly in clouds or on-premise servers, you don’t necessarily
+need those to start playing around with kubernetes. There are many projects like - kind or
+minikube which helps to run K8s on your laptop.
+Follow this guide and create a kubernetes cluster using kind: kind – Quick Start
+Or if you prefer minikube, minikube start (usually this needs more resources)
+
+
+We will be basing this exercise on kind, but once you have kubernetes up and running using
+kind or minikube, things would be similar.
+Once you’re comfortable with these topics, move on to the problem statement. The
+following section will be divided into groups of problems, each having reference guides and
+hints to accomplish the tasks. Go through the guides and try to accomplish the goals
+mentioned in each section.
+
+links:
+https://docs.docker.com/get-started/get-docker
+https://docs.docker.com/get-started/#start-the-tutorial
+https://docs.docker.com/get-started/workshop/02_our_app/#get-the-app
+https://kubernetes.io/docs/concepts/workloads/pods
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment
+https://kubernetes.io/docs/concepts/services-networking/service
