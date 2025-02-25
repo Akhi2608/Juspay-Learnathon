@@ -1,0 +1,9 @@
+Here, we are going to start building a simple microservice application, and deploy and
+monitor, using K8s.
+Start by unzipping the code-base: k8s-learnathon
+Follow the readme to start setting up the application using the kind cluster created.
+k8s-learnathon/README.md
+The README covers:
+1. Creating a cluster using kind
+2. Walkthrough of the application (microservice)
+3. Sample deployment configurations
