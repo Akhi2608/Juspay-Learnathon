@@ -1,0 +1,33 @@
+A very long time ago, applications used to combine all functionalities into big machines,
+often called mainframes. Although this approach made sense then, soon cheaper
+commodity hardware, distributed processing started making way for more scalable ways of
+developing and maintaining software systems. With many internet scale applications taking
+over daily routines, came different approaches to deploy and scale, slowly converging
+towards fundamentals of scale. One of the most popular ones being Virtual Machines.
+Although a generic concept in many operating systems, virtualization has seen many
+shapes and sizes.
+
+Companies started creating specialized softwares called “Hypervisors” to host different
+OSs in machines. But why do all this? With the growing need for organizations to run
+different software ranging from the business logic systems, reporting systems, internal
+portals and what not; for efficient utilization of hardware, it made sense to pack more things
+into machines and utilize them efficiently; after all these were big machines. But managing
+such systems again took a lot of effort, often having to run hundreds of servers, and things
+were often slow (comparatively). The main requirement was to have applications running in
+machines, to be isolated and can be controlled.
+
+Jump to 2008, linux kernel started to build the same capabilities, without needing special
+tools -- this was a game changer! Now running many such applications seems similar to
+opening a tab in the browser or running the music player in your phone, things just start to
+work with the same kind of isolation hypervisors used to provide without the baggage of
+having to “boot” into a different OS. Oh and did I mention, linux can run any *nix OS as a
+base for the application. Linux all along was it’s way was going towards this journey, with
+different approaches along the way like chroots and jails, it’s always been in the works.
+Afterall, one of the main functions of an OS was to have process isolation - be it processor,
+memory, disk or network. With the addition of cgroups and namespaces, it was possible to
+run a different OS itself as a process, and for that process it would look like an isolated
+compute unit. Each process was becoming another abstract machine.
+Thus containers were born. Docker is one the most popular tools for creating such
+“containers”, them being a package which contains the OS, the application and the
+supporting libraries or softwares it requires, all put into one standalone, self-sustaining box.
+These can run anywhere, and run the same way it runs in your laptop, on the servers too.
